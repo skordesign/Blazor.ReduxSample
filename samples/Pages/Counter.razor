@@ -1,0 +1,21 @@
+﻿@page "/counter"
+@inherits Redux.ReduxComponent<AppState, CounterState>
+
+<h1>Counter</h1>
+
+<p>Current count: @ViewModel.Count</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    protected override CounterState ViewModel => Store.State.CounterState;
+    async Task IncrementCount()
+    {
+        for(int i = 0; i < 100; i++)
+        {
+            Store.Dispatch(new IncrementAction());
+            await Task.Delay(1000);
+        }
+        Store.Dispatch(new DoneAction());
+    }
+}

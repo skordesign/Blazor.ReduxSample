@@ -1,0 +1,12 @@
+﻿@page "/"
+@inherits Redux.ReduxComponent<AppState, CounterState>
+<h1>Counter: @ViewModel.Count, Status: @ViewModel.Status </h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@code{ 
+    protected override CounterState ViewModel => Store.State.CounterState;
+
+}
