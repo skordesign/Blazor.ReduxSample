@@ -7,7 +7,7 @@ namespace Blazor.ReduxSample
         public static CounterState CounterReducer(CounterState state, object action)
         => action switch
         {
-            IncrementAction _ => new CounterState(state.Count + 1, "Changing"),
+            IncrementAction incrementAction => new CounterState(state.Count + 1, incrementAction.Message),
             DoneAction _ => new CounterState(state.Count, "Done"),
             _ => state
         };

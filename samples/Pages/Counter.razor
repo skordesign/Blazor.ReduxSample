@@ -13,7 +13,7 @@
     {
         for(int i = 0; i < 100; i++)
         {
-            Store.Dispatch(new IncrementAction());
+            Store.Dispatch(new IncrementAction("Change "));
             await Task.Delay(1000);
         }
         Store.Dispatch(new DoneAction());

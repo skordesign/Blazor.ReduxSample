@@ -1,5 +1,11 @@
 namespace Blazor.ReduxSample
 {
-    public struct IncrementAction { }
+    public class IncrementAction {
+        public string Message { get; }
+        public IncrementAction(string message)
+        {
+            Message = message;
+        }
+    }
     public struct DoneAction { }
 }
