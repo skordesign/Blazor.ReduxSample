@@ -1,5 +1,7 @@
 # Blazor.Redux
 This is very simply Redux library for Blazor, you can apply for your web app using Blazor
+# Supported
+Store, Reducer, Dispatch, Middleware
 # Run sample
 1. Open the project
 2. Go to *samples* folder
